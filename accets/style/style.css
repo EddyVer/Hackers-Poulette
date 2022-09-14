@@ -1,0 +1,11 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+#divDescript{
+  display: flex;
+  flex-direction: column;
+}
