@@ -1,7 +1,7 @@
 <?php
 if($_POST["names"] != null && $_POST["surname"] != null ) {
     if($_POST["email"] != null && $_POST["area"] != null ) {
-           $target = "accets/img/";
+           $target = "assets/img/";
         $targetFile = $target . basename($_FILES["image"]["name"]);
         $uploadOK = 1;
         echo $image = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
@@ -45,7 +45,7 @@ if($_POST["names"] != null && $_POST["surname"] != null ) {
 else{
     echo "not name or surmane
         <button><a href='index.php'>retun form</a></button>
-    " ;
+    ";
 }
 ?>
 

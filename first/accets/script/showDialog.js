@@ -5,3 +5,4 @@ document.getElementById("showDialog").onclick = function (){
 document.getElementById("hide").onclick = function (){
     dialog.close();
 }
+

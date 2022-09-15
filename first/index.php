@@ -18,8 +18,8 @@
     <div>
         <dialog id="login">
             <form action="user.php" method="post">
-                <p>Name <input type="text" name="names"></p>
-                <p>Password <input type="text" name="password"></p>
+                <label for="names">Name </label><input type="text" name="names">
+                <label for="password">Password</label> <input type="password" name="password">
                 <button type="submit">login</button>
 
             </form>
@@ -31,10 +31,10 @@
 </header>
     <main>
         <form action="send.php" method="post">
-            <p>Name <input type="text" name="names" required></p>
-            <p>Surname <input type="text" name="surname" required></p>
-            <p>Email <input type="text" name="email" required></p>
-            <p>Image <input type="file" name="image"></p>
+            <label for="name">Name</label> <input type="text" name="names" required>
+            <label for="surname">Surname </label><input type="text" name="surname" required>
+            <label for="email">Email</label> <input type="email" name="email" required>
+            <label for="image">Image</label>Image <input type="file" name="image">
             <div id="divDescript">
                 <label for="area">Description</label>
                 <textarea name="area" id="" cols="30" rows="10"></textarea>
