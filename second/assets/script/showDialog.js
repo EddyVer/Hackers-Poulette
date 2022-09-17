@@ -7,12 +7,13 @@ document.getElementById("hide").onclick = function (){
 }
 
 
-const form = document.querySelector(".form");
+const form = document.getElementById("form");
 
-const inputName = document.querySelector("#names");
-const inputSurname = document.querySelector("#surname");
-const inputEmail = document.querySelector("#email");
-const descript = document.querySelector("#Description")
+const inputName = document.getElementById("names");
+const inputSurname = document.getElementById("surname");
+const inputEmail = document.getElementById("email");
+const descript = document.getElementById("description")
+let error = undefined;
 
 
 //Show input error messages
@@ -21,6 +22,7 @@ function showError(input, message) {
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
+    error = message;
 }
 
 //show success colour
@@ -42,7 +44,7 @@ function checkEmail(input) {
 
 //checkRequired fields
 function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
+    inputArr.forEach(input => {
         if(input.value.trim() === ''){
             showError(input,`${getFieldName(input)} is required`)
         }else {
@@ -71,11 +73,14 @@ function getFieldName(input) {
 
 
 //Event Listeners
-form.addEventListener('submit',function(e) {
+form.addEventListener('submit',(e) => {
     e.preventDefault();
 
     checkRequired([inputSurname,inputName,inputEmail,descript]);
     checkLength(inputName,2,255);
     checkLength(inputSurname,2,255);
     checkEmail(inputEmail);
+    if(!error) {
+        form.submit();
+    }
 });

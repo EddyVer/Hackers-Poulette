@@ -5,28 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="accets/script/showDialog.js"></script>
-    <link rel="stylesheet" href="accets/style/style.css">
+    <script defer src="assets/script/showDialog.js"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Complaint From</title>
 </head>
 <body>
 <header>
-    <div>
         <dialog id="login">
             <form action="user.php" method="post">
-                <label for="names">Name </label><input type="text" name="names">
-                <label for="password">Password</label> <input type="password" name="password">
-                <button type="submit">login</button>
 
+                    <label for="names">Name </label>
+                    <input type="text" name="names">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+
+                <button type="submit">login</button>
             </form>
-            <button><a href="newUser.php">Sign up</a></button>
+            <button><a href="showTicket.php">Sign up</a></button>
             <button id="hide">Close</button>
         </dialog>
         <button id="showDialog">login</button>
-    </div>
 </header>
-    <main class="contaire">
-        <form class="form" enctype="multipart/form-data" action="send.php" method="post">
+<main >
+    <div class="container">
+        <form class="form" id="form" enctype="multipart/form-data" action="send.php" method="post">
             <div class="form-control">
                 <label for="name">Name</label>
                 <input id="names" type="text" name="names" placeholder="Enter name" required>
@@ -39,7 +42,7 @@
             </div>
             <div class="form-control">
                 <label for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="Enter Email" required>
+                <input id="email" type="text" name="email" placeholder="Enter Email" required>
                 <small>Error Message</small>
             </div>
             <div class="form-control">
@@ -54,10 +57,11 @@
             </div>
             <button type="submit">Send</button>
         </form>
-    </main>
+    </div>
+</main>
 <!--    <div class="images">-->
 <!--        --><?php
-//            include 'accets/utils/file_utils.php';
+//            include 'assets/utils/file_utils.php';
 //            list_images();
 //        ?>
 <!--    </div>-->
