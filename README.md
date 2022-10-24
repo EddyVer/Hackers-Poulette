@@ -29,4 +29,4 @@ If you have ticked all the above boxes, you can add some of the following featur
 -   Protect your form against the most common attacks (CSRF, XSS, SQL injection, etc.)
 -   Create a dashboard to display the received messages (admin side) which allow to manage the messages status (handled, not handled, response, etc..) (this is a big one I know, you probably won't have time to do it all, but it's a good exercise to learn how to manage a database and a dashboard)
 
-<a href = "http://formeddy.epizy.com/?i=1"> Form </a>
+<a href = "http://formeddy.epizy.com/?i=1">Acces to Form </a>
